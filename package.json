@@ -1,0 +1,33 @@
+{
+  "name": "tasty-treats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "handlebars": "^4.7.7",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttudorandrei/tasty-treats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttudorandrei/tasty-treats/issues"
+  },
+  "homepage": "https://github.com/ttudorandrei/tasty-treats#readme"
+}
