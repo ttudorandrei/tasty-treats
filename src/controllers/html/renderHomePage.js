@@ -1,5 +1,7 @@
-const renderHomePage = async () => {
-  console.log("Homepage rendered");
+const renderHomePage = async (req, res) => {
+  try {
+    return res.render("homepage");
+  } catch (error) {}
 };
 
 module.exports = { renderHomePage };
