@@ -2,8 +2,11 @@
 const { Router } = require("express");
 
 // importing dev created dependencies
-const addNewMessage = require("../../controllers/api/addNewMessage");
-const viewMessages = require("../../controllers/api/viewMessages");
+const {
+  addNewMessage,
+  viewMessages,
+} = require("../../controllers/api/messages");
+// const viewMessages = require("../../controllers/api/viewMessages");
 
 const router = Router();
 

@@ -9,4 +9,8 @@ const viewMessages = async (req, res) => {
   }
 };
 
-module.exports = viewMessages;
+const addNewMessage = async (req, res) => {
+  console.log("hit");
+};
+
+module.exports = { viewMessages, addNewMessage };
