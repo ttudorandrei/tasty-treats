@@ -6,6 +6,7 @@ const handlebars = require("express-handlebars");
 
 // importing dev created dependencies
 const routes = require("./routes");
+const logger = require("./middleware/logger");
 
 // assigning a port
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../", "public")));
+app.use(logger);
 app.use(routes);
 
 // adding helpers to handlebars
