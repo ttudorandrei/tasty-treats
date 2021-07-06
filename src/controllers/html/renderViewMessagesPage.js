@@ -3,13 +3,14 @@ const { Message } = require("../../models");
 const renderViewMessagesPage = async (req, res) => {
   try {
     const getMessages = async () => {
-      const sortedMessages = await Message.find({}).sort({ date: -1 });
-      console.log(sortedMessages);
+      const sortedMessages = await Message.find({}).sort({ date: -1 }).lean();
 
       return sortedMessages;
     };
 
-    const data = { messages: await getMessages() };
+    const data = { message: await getMessages() };
+
+    console.log(data.message);
 
     return res.render("view-messages", { data });
   } catch (error) {
