@@ -10,7 +10,25 @@ const viewMessages = async (req, res) => {
 };
 
 const addNewMessage = async (req, res) => {
-  console.log("hit");
+  try {
+    const { fullName, email, userMessage, newsletterCheck, date } = req.body;
+
+    if ((fullName && email && userMessage & newsletterCheck, date)) {
+      await Message.create({
+        fullName,
+        email,
+        userMessage,
+        newsletterCheck,
+        date,
+      });
+
+      return res.status(200).json({ data: "Message successfully added" });
+    }
+
+    return res.status(400).json({ error: "Could not create message." });
+  } catch (error) {
+    console.info(error.message);
+  }
 };
 
 module.exports = { viewMessages, addNewMessage };

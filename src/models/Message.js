@@ -7,7 +7,7 @@ const messageSchema = {
     type: String,
     required: true,
   },
-  message: {
+  userMessage: {
     type: String,
     required: true,
   },
@@ -16,7 +16,11 @@ const messageSchema = {
     required: true,
   },
   newsletterCheck: {
-    type: Boolean,
+    type: String,
+    required: true,
+  },
+  date: {
+    type: String,
     required: true,
   },
 };

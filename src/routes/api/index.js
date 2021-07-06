@@ -6,7 +6,6 @@ const {
   addNewMessage,
   viewMessages,
 } = require("../../controllers/api/messages");
-// const viewMessages = require("../../controllers/api/viewMessages");
 
 const router = Router();
 
