@@ -1,5 +1,7 @@
+// importing dependencies
 const mongoose = require("mongoose");
 
+// creating a new Schema
 const Schema = mongoose.Schema;
 
 const messageSchema = {
@@ -24,8 +26,10 @@ const messageSchema = {
   },
 };
 
+// building a schema with our preferences
 const MessageSchema = new Schema(messageSchema);
 
+// creating a new model using the schema
 const Message = mongoose.model("Message", MessageSchema);
 
 module.exports = Message;

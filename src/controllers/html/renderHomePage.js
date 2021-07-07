@@ -1,3 +1,4 @@
+// function to render the homepage
 const renderHomePage = async (req, res) => {
   try {
     return res.render("homepage");

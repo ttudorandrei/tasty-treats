@@ -8,6 +8,7 @@ const renderViewMessagesPage = require("../../controllers/html/renderViewMessage
 
 const router = Router();
 
+// routes
 router.get("/view-messages", renderViewMessagesPage);
 router.get("/leave-a-message", renderLeaveAMessagePage);
 router.get("/", renderHomePage);

@@ -9,6 +9,7 @@ const {
 
 const router = Router();
 
+// routes
 router.post("/add-new-message", addNewMessage);
 router.get("/view-messages", viewMessages);
 

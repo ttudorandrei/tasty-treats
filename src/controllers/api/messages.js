@@ -1,5 +1,7 @@
+// importing model
 const { Message } = require("../../models");
 
+// this will render all of the messages in our database
 const viewMessages = async (req, res) => {
   try {
     const messages = await Message.find({});
@@ -9,10 +11,13 @@ const viewMessages = async (req, res) => {
   }
 };
 
+// endpoint to add a new message to the database
 const addNewMessage = async (req, res) => {
   try {
+    // destructuring the data we need from req.body
     const { fullName, email, userMessage, newsletterCheck, date } = req.body;
 
+    // if all of the data is present, it is stored in the database, else, and error is thrown
     if ((fullName && email && userMessage & newsletterCheck, date)) {
       await Message.create({
         fullName,

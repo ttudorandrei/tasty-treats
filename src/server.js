@@ -25,6 +25,7 @@ mongoose.connect(DB_URL, dbOptions);
 // creating express application
 const app = express();
 
+// middleware
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../", "public")));
 app.use(express.urlencoded({ extended: true }));
