@@ -15,6 +15,7 @@ const messageSchema = {
   },
   email: {
     type: String,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
     required: true,
   },
   newsletterCheck: {
