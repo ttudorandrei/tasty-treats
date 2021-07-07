@@ -9,6 +9,10 @@
       Email:
       <a href="{{email}}"> {{email}}</a>
     </p>
-    <p>Subscribed it email: </p>
+    {{#if newsletterCheck}}
+      <p>Subscribed to Tasty Treats Newsletter</p>
+    {{else}}
+      <p>Not Subscribed to Tasty Treats Newsletter</p>
+    {{/if}}
   </div>
 </div>

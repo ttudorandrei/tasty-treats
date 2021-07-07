@@ -17,7 +17,6 @@ const messageSchema = {
   },
   newsletterCheck: {
     type: String,
-    required: true,
   },
   date: {
     type: String,

@@ -3,7 +3,9 @@ const handleSubmit = async (event) => {
   const fullName = $("#full-name").val();
   const email = $("#email-address").val();
   const userMessage = $("#user-message").val();
-  const newsletterCheck = $("#newsletter-check").val();
+  const newsletterCheck = $("#newsletter-check:checked").val();
+
+  console.log(newsletterCheck);
 
   const options = {
     method: "POST",
@@ -18,7 +20,7 @@ const handleSubmit = async (event) => {
     }),
   };
 
-  if (!fullName || !email || !userMessage || !newsletterCheck) {
+  if (!fullName || !email || !userMessage) {
     $("#submit-alert").text(
       "Please make sure all fields are filled correctly!"
     );

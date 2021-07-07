@@ -10,8 +10,6 @@ const renderViewMessagesPage = async (req, res) => {
 
     const data = { message: await getMessages() };
 
-    console.log(data.message);
-
     return res.render("view-messages", { data });
   } catch (error) {
     console.info(error.message);
