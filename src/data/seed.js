@@ -21,7 +21,7 @@ const init = async () => {
     // awaits for Messages to be inserted into the db and it prints the data.
     const messages = await Message.insertMany(messagesData);
 
-    console.log(messages);
+    console.info(`Messages successfully seeded`);
 
     // after the file was seeded, the connection is going to be closed
     mongoose.connection.close();
