@@ -1,3 +1,6 @@
+// hiding the second field using jQuery when loading the page
+$(document).ready($("#second-honeypot").hide());
+
 // this will run when form is submitted
 const handleSubmit = async (event) => {
   event.preventDefault();
@@ -7,8 +10,10 @@ const handleSubmit = async (event) => {
   const email = $("#email-address").val();
   const userMessage = $("#user-message").val();
   const newsletterCheck = $("#newsletter-check:checked").val();
+  const firstHiddenField = $("#first-honeypot").val();
+  const secondHiddenField = $("#second-honeypot").val();
 
-  // makes a post request to our api
+  //options to make a request to our api
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -18,7 +23,7 @@ const handleSubmit = async (event) => {
       email,
       userMessage,
       newsletterCheck,
-      date: moment().format("dddd, MMMM Do YYYY, h:mm:ss a"),
+      date: moment().format("dddd, MMMM Do YYYY"),
     }),
   };
 
@@ -27,6 +32,17 @@ const handleSubmit = async (event) => {
     $("#submit-alert").text(
       "Please make sure all fields are filled correctly!"
     );
+    return;
+  } else if (
+    // if at least one of the fields is changed (first one should be empty, second one should have a default value), the user is flagged as a bot and not allowed to continue, error message will be displayed
+    firstHiddenField ||
+    secondHiddenField !== "no bot at all" ||
+    (firstHiddenField && secondHiddenField !== "no bot at all")
+  ) {
+    $("#submit-alert").text(
+      "I`m sorry, this is a 'No bots' environment, you can`t continue!"
+    );
+
     return;
   }
 

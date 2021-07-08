@@ -29,11 +29,12 @@
       <label class="form-check-label" for="newsletter-check">Would you like to
         subscribe to the Tasty Treats Newsletter?</label>
     </div>
-    <div
-      class="g-recaptcha mb-3"
-      id="capcha"
-      data-sitekey="6LeNm3sbAAAAAOEjSEWrhsskKNXUCYCeJvnW3LVY"
-    ></div>
+    <div class="mb-3">
+      <input type="text" class="hidden-field" id="first-honeypot" />
+    </div>
+    <div class="mb-3">
+      <input type="text" id="second-honeypot" value="no bot at all" />
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <div class="text-danger" id="submit-alert"></div>
