@@ -5,16 +5,16 @@
 - [Tasty Treats](#tasty-treats)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
-  - [User STory](#user-story)
+  - [User Story](#user-story)
   - [Getting Started](#getting-started)
   - [Screenshots](#screenshots)
   - [Link to Github](#link-to-github)
 
 ## Description
 
-Tasty Treats app is an inquiry form that allows for messages to be submitted by users and saved in the database. Messages can also be viewed by accessing the View Messages page.
+Tasty Treats app is an inquiry form that allows for messages to be submitted by users and saved in the database. Messages can then be viewed by accessing the View Messages page.
 
-## User STory
+## User Story
 
 ```md
 WHEN I open the Application, I am presented with the landing page and two buttons that let me choose whether I want to add a message or view messages.
@@ -34,10 +34,10 @@ THEN the form will not be submitted and an error message would be rendered on th
 WHEN I try to submit the message without a valid email,
 THEN an error will be thrown, informing me that I need to submit a valid email address.
 
-WHEN I am redirected to the View messages page, I can see all of the messages that have been sent, the name, email address of the user that sent the message, the date the message was sent and whether the user is subscribed to the newsletter or not. Newest messages being displayed at the top.
+WHEN I am redirected to the View messages page, I can see all of the messages that have been sent, the name, email address of the user that sent the message, the date the message was sent and whether the user is subscribed to the newsletter or not. Newest messages are being displayed at the top.
 
 WHEN I click on the "Home" button,
-THEN I am redirected back to the lading page.
+THEN I am redirected back to the landing page.
 ```
 
 ## Getting Started
@@ -46,7 +46,9 @@ THEN I am redirected back to the lading page.
 
 - run `git clone git@github.com:ttudorandrei/tasty-treats.git`
 
-- type in `code .` to open the app in vscode
+- cd into the new `tasty-treats` folder
+
+- type in `code .` to open the app in VSCode
 
 - in your VSCode terminal type in `npm run seed` to seed the database
 
