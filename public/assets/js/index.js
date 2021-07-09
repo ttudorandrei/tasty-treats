@@ -23,7 +23,7 @@ const handleSubmit = async (event) => {
       email,
       userMessage,
       newsletterCheck,
-      date: moment().format("dddd, MMMM Do YYYY"),
+      date: moment().format("YYYY MM DD"),
     }),
   };
 

@@ -4,26 +4,26 @@ const messages = [
     email: "johnsmith@email.com",
     userMessage: "I`m John Smith and this is my test message",
     newsletterCheck: "on",
-    date: "Wednesday, July 4th 2021",
+    date: "2021 07 06",
   },
   {
     fullName: "Anne Smith",
     email: "annesmith@email.com",
     userMessage: "I`m Anne Smith and this is my test message",
     newsletterCheck: "on",
-    date: "Wednesday, July 5th 2021",
+    date: "2021 07 07",
   },
   {
     fullName: "Peter Smith",
     email: "petersmith@email.com",
     userMessage: "I`m Peter Smith and this is my test message",
-    date: "Wednesday, July 6th 2021",
+    date: "2021 07 08",
   },
   {
     fullName: "Dennis Smith",
     email: "dennissmith@email.com",
     userMessage: "I`m Dennis Smith and this is my test message",
-    date: "Wednesday, July 7th 2021",
+    date: "2021 07 10",
   },
 ];
 
