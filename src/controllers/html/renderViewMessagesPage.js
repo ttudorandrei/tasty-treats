@@ -6,7 +6,7 @@ const renderViewMessagesPage = async (req, res) => {
   try {
     const getMessages = async () => {
       // this finds all of the messages, sorts them by date. the .lean() method is changing the Mongoose Document class into a javascript object
-      const sortedMessages = await Message.find({}).sort({ date: 1 }).lean();
+      const sortedMessages = await Message.find({}).sort({ date: -1 }).lean();
 
       return sortedMessages;
     };
